@@ -1,0 +1,520 @@
+/* ==============================
+   VARIABLES - BEIGE MODERNE
+============================== */
+
+:root {
+  --background: #faf7f2;
+
+  --section: #f1ebe3;
+
+  --card: #ffffff;
+
+  --primary: #4b5563;
+
+  --accent: #c08457;
+
+  --secondary: #9ca3af;
+
+  --text: #374151;
+
+  --border: #e5ddd3;
+
+  --radius: 24px;
+
+  --shadow: 0 10px 30px rgba(75, 85, 99, 0.12);
+}
+
+/* ==============================
+   RESET
+============================== */
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+
+  background: var(--background);
+
+  color: var(--text);
+
+  line-height: 1.6;
+
+  font-size: 16px;
+}
+
+/* ==============================
+   GLOBAL
+============================== */
+
+.container {
+  width: 90%;
+
+  max-width: 1200px;
+
+  margin: auto;
+}
+
+main {
+  padding: 40px 0;
+}
+
+img {
+  max-width: 100%;
+
+  display: block;
+}
+
+/* ==============================
+   TITRES
+============================== */
+
+h1 {
+  font-size: 48px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  color: var(--text);
+
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 32px;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  color: var(--text);
+
+  margin-bottom: 25px;
+}
+
+h3 {
+  font-size: 22px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  color: var(--text);
+
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: var(--accent);
+
+  margin-bottom: 15px;
+}
+
+/* ==============================
+   TITRES DE SECTIONS CENTRÉS
+============================== */
+
+.section > h2,
+.section-cartes > h2,
+.article-projets > h2 {
+  text-align: center;
+}
+
+/* Sous-titres d'introduction des sections */
+
+.section > h3,
+.section-cartes > h3 {
+  text-align: center;
+
+  max-width: 750px;
+
+  margin-left: auto;
+
+  margin-right: auto;
+}
+
+/* ==============================
+   TITRES HEADER
+============================== */
+
+header h1 {
+  max-width: 900px;
+}
+
+header h5 {
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  color: var(--secondary);
+
+  margin-bottom: 20px;
+}
+
+/* Texte justifié de la présentation */
+
+.section p {
+  text-align: justify;
+}
+
+/* ==============================
+   LIENS
+============================== */
+
+a {
+  text-decoration: none;
+
+  color: var(--text);
+
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* ==============================
+   NAVIGATION
+============================== */
+
+nav {
+  display: flex;
+
+  gap: 30px;
+
+  padding: 25px 0;
+
+  margin-bottom: 50px;
+}
+
+nav a {
+  font-weight: 600;
+}
+
+/* ==============================
+   HEADER
+============================== */
+
+header {
+  padding: 30px 0;
+}
+
+header p {
+  max-width: 750px;
+
+  font-size: 18px;
+
+  color: #4b5563;
+}
+
+header h5 {
+  font-size: 14px;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  color: var(--secondary);
+
+  margin-bottom: 20px;
+}
+
+/* ==============================
+   SECTIONS
+============================== */
+
+.section {
+  background: var(--section);
+
+  border-radius: var(--radius);
+
+  padding: 45px;
+
+  margin: 40px 0;
+}
+
+/* ==============================
+   COMPETENCES / SKILLS
+============================== */
+
+.skills {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 12px;
+
+  width: 100%;
+
+  margin: 25px auto 0;
+}
+
+.skill {
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  color: var(--text);
+
+  padding: 10px 20px;
+
+  border-radius: 50px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.skill:hover {
+  background: var(--accent);
+
+  color: white;
+
+  transform: translateY(-3px);
+}
+/* ==============================
+   CARTES PROJETS
+============================== */
+
+.section-cartes {
+  background: var(--section);
+
+  border-radius: var(--radius);
+
+  padding: 45px;
+}
+
+.grille-cartes {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 30px;
+}
+
+.carte {
+  background: var(--card);
+
+  border-radius: var(--radius);
+
+  overflow: hidden;
+
+  box-shadow: var(--shadow);
+
+  transition: 0.3s;
+}
+
+.carte:hover {
+  transform: translateY(-8px);
+}
+
+.carte-image {
+  width: 100%;
+
+  height: 230px;
+
+  object-fit: cover;
+}
+
+.carte h3 {
+  margin: 25px 30px 10px;
+}
+
+.carte h4 {
+  margin: 0 30px 15px;
+}
+
+.carte p {
+  margin: 0 30px 20px;
+
+  color: #4b5563;
+}
+
+.carte .button {
+  margin: 0 30px 30px;
+}
+
+/* ==============================
+   PAGES PROJETS
+============================== */
+
+.article-projets {
+  background: var(--section);
+
+  border-radius: var(--radius);
+
+  padding: 45px;
+}
+
+.article-video {
+  margin: 35px 0;
+}
+
+.article-video video {
+  width: 100%;
+
+  max-height: 600px;
+
+  border-radius: var(--radius);
+}
+
+.article-content {
+  background: var(--card);
+
+  padding: 40px;
+
+  border-radius: var(--radius);
+}
+
+.article-content ul {
+  margin: 20px 0 25px 25px;
+}
+
+.article-content li {
+  margin-bottom: 10px;
+}
+
+/* ==============================
+   BOUTONS
+============================== */
+
+.button {
+  display: inline-block;
+
+  padding: 12px 25px;
+
+  background: var(--primary);
+
+  color: white;
+
+  border-radius: 50px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: var(--accent);
+
+  color: white;
+
+  transform: translateY(-3px);
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+  background: var(--section);
+
+  border-radius: var(--radius);
+
+  padding: 35px;
+
+  margin-top: 50px;
+
+  text-align: center;
+}
+
+.footer-contact p {
+  margin-bottom: 8px;
+}
+
+.footer-info {
+  margin-top: 25px;
+
+  color: var(--secondary);
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .grille-cartes {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .section,
+  .section-cartes,
+  .article-projets {
+    padding: 25px;
+  }
+
+  .article-content {
+    padding: 25px;
+  }
+
+  nav {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .carte-image {
+    height: 180px;
+  }
+}
+/* ==============================
+   HEADER ACCUEIL
+============================== */
+
+header .container {
+  text-align: center;
+}
+
+header h1 {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header p {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header nav {
+  justify-content: center;
+}
+
+header h5 {
+  text-align: center;
+}

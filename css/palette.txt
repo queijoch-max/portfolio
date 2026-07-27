@@ -1,0 +1,7 @@
+:root {
+  --light-yellow: #f8fcda;
+  --cream: #e3e9c2;
+  --cream-2: #f9fbb2;
+  --olive-wood: #7c6354;
+  --cool-steel: #a5abaf;
+}
