@@ -125,6 +125,14 @@ h4 {
 }
 
 /* ==============================
+   TEXTE
+============================== */
+
+p {
+  margin-bottom: 15px;
+}
+
+/* ==============================
    TITRES DE SECTIONS CENTRÉS
 ============================== */
 
@@ -235,6 +243,10 @@ header h5 {
   color: var(--secondary);
 
   margin-bottom: 20px;
+}
+
+.hero-actions {
+  margin: 20px 0 35px;
 }
 
 /* ==============================
@@ -388,6 +400,16 @@ header h5 {
   padding: 40px;
 
   border-radius: var(--radius);
+}
+
+.article-content h3 {
+  margin-top: 35px;
+
+  margin-bottom: 20px;
+}
+
+.article-content h3:first-child {
+  margin-top: 0;
 }
 
 .article-content ul {

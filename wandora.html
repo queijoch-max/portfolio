@@ -1,0 +1,144 @@
+<!doctype html>
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      Wandora - Réseau social pour voyageur avec carte interactive | Charlotte Queijo
+    </title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <a href="index.html">Accueil</a>
+
+          <a href="index.html#projets">Projets</a>
+
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <h1>Wandora - Réseau social pour voyageur avec carte interactive</h1>
+
+        <p>
+          Réseau social pour voyageur avec carte interactive, album de voyages, messagerie, partage de photos et vidéos, fil d'actualités, etc.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="article-projets">
+        <div class="container">
+          <h2>Wandora - Réseau social pour voyageur avec carte interactive</h2>
+
+          <!-- DÉMONSTRATION VIDÉO -->
+
+          <div class="article-video">
+            <video controls>
+              <source src="videos/wandora.mp4" type="video/mp4" />
+
+              Votre navigateur ne supporte pas la lecture de cette vidéo.
+            </video>
+          </div>
+
+          <div class="article-content">
+            <h3>Le projet</h3>
+
+            <p>
+             Le projet Wandora est un réseau social pensé pour les voyageurs qui souhaitent partager leurs itinéraires et leurs souvenirs plutôt que d'entretenir une messagerie permanente comme sur les réseaux classiques.
+            </p>
+
+            <p>
+             L'objectif était de concevoir une plateforme centrée sur le partage de voyage : itinéraires, étapes géolocalisées, photos et échanges avec ses ami(e)s, au sein d'une interface unique.
+            </p>
+
+            <h3>Ce que j'ai développé</h3>
+
+            <p>
+             J'ai développé cette application avec React et TypeScript pour le frontend, associé à une API backend construite avec Symfony et API Platform, en concevant une interface composée de plusieurs espaces dédiés à la gestion du profil, des voyages et des échanges sociaux. </p>
+
+            <h3>Fonctionnalités principales</h3>
+
+            <ul>
+              <li>Fil d'actualité avec publications multi-photos, réactions et commentaires en fil de discussion</li>
+
+              <li>
+                Gestion des voyages : création d'itinéraires, étapes géolocalisées sur une carte interactive (Leaflet), et album photo par voyage
+              </li>
+
+              <li>Système d'ami(e)s avec demandes d'ajout, acceptation/refus et compteur</li>
+
+              <li>
+                Messagerie interne pour échanger directement depuis le profil d'un(e) ami(e)
+              </li>
+
+              <li>
+                Authentification sécurisée par token (JWT) et gestion complète du profil utilisateur
+              </li>
+
+              <li>Interface responsive adaptée aux différents usages</li>
+            </ul>
+
+            <p>
+              J'ai également travaillé la structuration de l'API (ressources générées à partir des entités backend, sécurisation des accès pour que chaque utilisateur ne voie que ce qui le concerne) ainsi que l'organisation des composants et l'expérience utilisateur côté frontend, afin de construire une application cohérente, sécurisée et agréable à utiliser.</p>
+
+            <h3>Compétences développées</h3>
+
+            <ul>
+              <li>Développement front-end avec React et TypeScript</li>
+
+              <li>Conception et consommation d'une API REST (Symfony / API Platform)</li>
+
+              <li>Modélisation de données relationnelles et gestion des accès (authentification JWT, permissions par utilisateur)</li>
+
+              <li>Organisation et réutilisation de composants</li>
+
+              <li>Navigation avec React Router</li>
+
+              <li>
+                Intégration d'une carte interactive (Leaflet)
+              </li>
+
+              <li>Gestion des interactions utilisateur en temps quasi réel (messagerie, réactions, commentaires)</li>
+
+              <li>Conception d'une interface responsive</li>
+
+              <li>Analyse d'un besoin produit et conception d'une architecture backend/frontend découplée</li>
+            </ul>
+
+            <a
+              href="https://github.com/queijoch-max/Wandora"
+              class="button"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Découvrir l'application
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <div class="footer-contact">
+        <p>32 Route de Brezon, 07340 Félines</p>
+
+        <p>Email : queijo.ch@gmail.com</p>
+
+        <p>Téléphone : 06 69 17 74 51</p>
+      </div>
+
+      <div class="footer-info">
+        <p>© 2026 Charlotte Queijo - Future développeuse web et web mobile</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
