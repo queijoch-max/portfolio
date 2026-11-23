@@ -1,0 +1,199 @@
+<!doctype html>
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a1224" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Côte à côte - Application d'entraide communale | Charlotte Queijo</title>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <a href="index.html" class="brand" aria-label="Charlotte Queijo, accueil">
+          <span class="brand-mark">CQ</span>
+          <span>Charlotte Queijo</span>
+        </a>
+        <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">☰</button>
+        <nav class="nav-links" id="menu" aria-label="Navigation principale">
+          <a href="index.html#projets" class="active">Projets</a>
+          <a href="index.html#competences">Compétences</a>
+          <a href="index.html#approche">Approche</a>
+          <a href="index.html#parcours">Parcours</a>
+          <a href="index.html#contact" class="nav-cta">Me contacter</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page-head">
+      <div class="container">
+        <a href="index.html#projets" class="back-link">← tous les projets</a>
+        <h1>Côte à côte - Application d'entraide communale</h1>
+        <p class="lead">Application web permettant aux habitants d'une commune de demander et de proposer de l'aide entre eux, dans un cadre fixé par la mairie.</p>
+        <div><span class="tag">React 19</span> <span class="tag">Symfony 7</span> <span class="tag">Doctrine</span> <span class="tag">PHPUnit</span> <span class="tag">Vitest</span> </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="container detail">
+        <article>
+          <div class="video-frame">
+            <video controls preload="metadata">
+              <source src="videos/coteacote.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la lecture de cette vidéo.
+            </video>
+          </div>
+
+          <div class="prose">
+            <h3>Le projet</h3>
+
+            <p>
+              Côte à côte est une application d'entraide pensée pour les
+              habitants d'une commune : un voisin cherche un coup de main pour
+              ses courses, du bricolage ou un covoiturage, un autre peut l'aider.
+              L'enjeu principal était la confiance : permettre l'entraide sans
+              exposer les habitants.
+            </p>
+
+            <p>
+              J'ai donc conçu une application où la sécurité vient de la
+              structure elle-même : les annonces se créent avec des listes
+              déroulantes, le seul champ libre est limité à 30 caractères et
+              passe par un filtre, la mairie valide chaque inscription, et
+              aucune coordonnée n'est jamais affichée.
+            </p>
+
+            <h3>Ce que j'ai développé</h3>
+
+            <p>
+              J'ai développé l'application complète à partir d'un cahier des
+              charges détaillé (exigences numérotées, règles métier, critères de
+              recette) : une API REST avec Symfony 7.4 et Doctrine, et un front
+              React 19 avec Vite et React Router, pensé mobile d'abord.
+            </p>
+
+            <h3>Fonctionnalités principales</h3>
+
+            <ul>
+              <li>
+                Inscription avec confirmation par e-mail, puis validation de
+                chaque habitant par la mairie
+              </li>
+
+              <li>
+                Publication d'annonces guidée (10 catégories, 30
+                sous-catégories), 5 annonces actives maximum, expiration
+                automatique après 30 jours
+              </li>
+
+              <li>
+                Bouton « Je peux aider » : seul l'auteur de l'annonce reçoit le
+                contact de l'aidant, par e-mail
+              </li>
+
+              <li>
+                Signalement des annonces par les habitants, avec masquage
+                automatique à partir de 3 signalements
+              </li>
+
+              <li>
+                Espace mairie : tableau de bord, validation des inscriptions,
+                modération, suspension de comptes, publication pour un habitant
+                sans Internet et journal des actions
+              </li>
+
+              <li>
+                Récapitulatif quotidien envoyé à la mairie par des tâches
+                planifiées (Symfony Scheduler)
+              </li>
+
+              <li>
+                Respect des données personnelles : export JSON des données,
+                pages légales et purge selon des durées de conservation
+              </li>
+            </ul>
+
+            <p>
+              J'ai particulièrement soigné la sécurité : authentification par
+              session (cookie HttpOnly) et protection CSRF, droits gérés par des
+              Voters Symfony, limitation des tentatives de connexion, et un
+              filtre serveur qui déjoue les contournements (« g m a i l »,
+              « 0range »). Les réponses de l'API sont construites champ par
+              champ pour ne jamais exposer de coordonnées, ce que vérifie un
+              test automatisé.
+            </p>
+
+            <h3>Compétences développées</h3>
+
+            <ul>
+              <li>Conception d'une application full stack React / Symfony</li>
+
+              <li>
+                Analyse d'un cahier des charges et traduction en fonctionnalités
+                testables
+              </li>
+
+              <li>
+                Sécurité applicative : sessions, CSRF, rôles et permissions,
+                limitation de débit
+              </li>
+
+              <li>
+                Modélisation relationnelle avec Doctrine (8 entités, migrations,
+                fixtures)
+              </li>
+
+              <li>
+                Tests automatisés : PHPUnit côté API, Vitest et Testing Library
+                côté front
+              </li>
+
+              <li>
+                Documentation d'API avec OpenAPI et prise en compte de
+                l'accessibilité et du RGPD
+              </li>
+
+              <li>Tâches planifiées et envoi d'e-mails (Symfony Mailer)</li>
+            </ul>
+
+            
+          
+          </div>
+        </article>
+
+        <aside class="side">
+          <div class="side-card">
+            <h4>Stack</h4>
+            <div class="chips"><span class="chip">React 19</span><span class="chip">Symfony 7</span><span class="chip">Doctrine</span><span class="chip">PHPUnit</span><span class="chip">Vitest</span></div>
+          </div>
+          <div class="side-card">
+            <h4>Code source</h4>
+            <a href="https://github.com/queijoch-max/coteacote" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Voir sur GitHub ↗</a>
+            <a href="index.html#projets" class="btn btn-outline">← Autres projets</a>
+          </div>
+          <div class="side-card">
+            <h4>Autres projets</h4>
+            <ul class="more-list"><li><a href="assistant-tri.html">Assistant IA de tri SAV</a></li><li><a href="delormeimmobilier.html">Delorme Immobilier</a></li><li><a href="synapse.html">Synapse</a></li><li><a href="wandora.html">Wandora</a></li><li><a href="tech-dev.html">Tech &amp; Dev</a></li></ul>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>© 2026 Charlotte Queijo — Développeuse full stack · back-end &amp; IA</span>
+        <span>queijo.ch@gmail.com · 06 69 17 74 51</span>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

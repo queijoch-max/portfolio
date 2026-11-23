@@ -1,0 +1,185 @@
+<!doctype html>
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a1224" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Synapse - Second cerveau avec assistant IA | Charlotte Queijo</title>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <a href="index.html" class="brand" aria-label="Charlotte Queijo, accueil">
+          <span class="brand-mark">CQ</span>
+          <span>Charlotte Queijo</span>
+        </a>
+        <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">☰</button>
+        <nav class="nav-links" id="menu" aria-label="Navigation principale">
+          <a href="index.html#projets" class="active">Projets</a>
+          <a href="index.html#competences">Compétences</a>
+          <a href="index.html#approche">Approche</a>
+          <a href="index.html#parcours">Parcours</a>
+          <a href="index.html#contact" class="nav-cta">Me contacter</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page-head">
+      <div class="container">
+        <a href="index.html#projets" class="back-link">← tous les projets</a>
+        <h1>Synapse - Second cerveau avec assistant IA</h1>
+        <p class="lead">Application pour apprendre : notes reliées entre elles, import de PDF, fiches de révision, quiz et assistant IA qui connaît tous mes cours.</p>
+        <div><span class="tag tag-ia">IA · agent</span> <span class="tag">JavaScript</span> <span class="tag">Gemini</span> <span class="tag">IndexedDB</span> </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="container detail">
+        <article>
+          <div class="video-frame">
+            <video controls preload="metadata">
+              <source src="videos/synapse.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la lecture de cette vidéo.
+            </video>
+          </div>
+
+          <div class="prose">
+            <h3>Le projet</h3>
+
+            <p>
+              Synapse est née d'un besoin réel : organiser mes formations
+              (Python, AI Engineer, Full Stack) et retrouver instantanément une
+              information dans des dizaines de cours. Je l'ai conçue comme un
+              mélange de Notion et de NotebookLM, et je l'utilise pour mes
+              propres révisions.
+            </p>
+
+            <p>
+              Le défi : une application complète, 100 % gratuite, sans serveur ni
+              base de données à héberger. Tout tourne dans le navigateur, avec
+              des données stockées localement (IndexedDB).
+            </p>
+
+            <h3>Ce que j'ai développé</h3>
+
+            <p>
+              J'ai développé l'application en JavaScript, sans framework, avec
+              des modules JS, une base IndexedDB et l'API Google Gemini appelée
+              directement depuis le navigateur. Elle comporte deux espaces : un
+              espace Formation et un espace Suivi de projet.
+            </p>
+
+            <h3>Fonctionnalités principales</h3>
+
+            <ul>
+              <li>
+                Éditeur Markdown avec sauvegarde automatique, notes reliées par
+                des liens <code>[[Nom]]</code> et graphe des connexions
+              </li>
+
+              <li>
+                Recherche instantanée dans les titres, tags, contenus et texte
+                des PDF
+              </li>
+
+              <li>
+                Import de dossiers de PDF qui reconstruisent automatiquement
+                formations, modules et chapitres
+              </li>
+
+              <li>
+                Génération IA de fiches de synthèse et de quiz (QCM et
+                vrai/faux) sans jamais reposer deux fois la même question
+              </li>
+
+              <li>
+                Assistant IA doté d'outils : il liste, cherche et lit lui-même
+                les notes avant de répondre, et peut créer des fiches
+              </li>
+
+              <li>
+                Espace de suivi de projet : tâches, Kanban en glisser-déposer,
+                agenda, bloc-notes, post-its et météo
+              </li>
+
+              <li>
+                Mur de diplômes et certifications, export et import complets des
+                données en JSON
+              </li>
+            </ul>
+
+            <p>
+              J'ai particulièrement travaillé la gestion des limites de l'offre
+              gratuite de l'IA (choix du modèle, consommation de requêtes) et la
+              confidentialité : les notes restent sur l'appareil de
+              l'utilisateur.
+            </p>
+
+            <h3>Compétences développées</h3>
+
+            <ul>
+              <li>JavaScript moderne : modules, asynchrone, manipulation du DOM</li>
+
+              <li>
+                Stockage local avancé avec IndexedDB et import/export de données
+              </li>
+
+              <li>
+                Intégration d'une API de LLM et conception d'un agent qui
+                utilise des outils (recherche, lecture, création de notes)
+              </li>
+
+              <li>Extraction de texte de PDF et traitement de fichiers</li>
+
+              <li>
+                Interactions avancées : glisser-déposer, raccourcis clavier,
+                graphe de notes
+              </li>
+
+              <li>Intégration d'une API externe (données météo Open-Meteo)</li>
+
+              <li>Conception d'une interface claire pour un usage quotidien</li>
+            </ul>
+
+            
+          
+          </div>
+        </article>
+
+        <aside class="side">
+          <div class="side-card">
+            <h4>Stack</h4>
+            <div class="chips"><span class="chip">IA · agent</span><span class="chip">JavaScript</span><span class="chip">Gemini</span><span class="chip">IndexedDB</span></div>
+          </div>
+          <div class="side-card">
+            <h4>Code source</h4>
+            <a href="https://github.com/queijoch-max/Synapse" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Voir sur GitHub ↗</a>
+            <a href="index.html#projets" class="btn btn-outline">← Autres projets</a>
+          </div>
+          <div class="side-card">
+            <h4>Autres projets</h4>
+            <ul class="more-list"><li><a href="assistant-tri.html">Assistant IA de tri SAV</a></li><li><a href="delormeimmobilier.html">Delorme Immobilier</a></li><li><a href="wandora.html">Wandora</a></li><li><a href="coteacote.html">Côte à côte</a></li><li><a href="tech-dev.html">Tech &amp; Dev</a></li></ul>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>© 2026 Charlotte Queijo — Développeuse full stack · back-end &amp; IA</span>
+        <span>queijo.ch@gmail.com · 06 69 17 74 51</span>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

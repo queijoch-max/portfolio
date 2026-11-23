@@ -1,0 +1,180 @@
+<!doctype html>
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a1224" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Delorme Immobilier - Site et back-office avec IA | Charlotte Queijo</title>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <a href="index.html" class="brand" aria-label="Charlotte Queijo, accueil">
+          <span class="brand-mark">CQ</span>
+          <span>Charlotte Queijo</span>
+        </a>
+        <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">☰</button>
+        <nav class="nav-links" id="menu" aria-label="Navigation principale">
+          <a href="index.html#projets" class="active">Projets</a>
+          <a href="index.html#competences">Compétences</a>
+          <a href="index.html#approche">Approche</a>
+          <a href="index.html#parcours">Parcours</a>
+          <a href="index.html#contact" class="nav-cta">Me contacter</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page-head">
+      <div class="container">
+        <a href="index.html#projets" class="back-link">← tous les projets</a>
+        <h1>Delorme Immobilier - Site et back-office avec IA</h1>
+        <p class="lead">Site et espace de gestion d'une agence immobilière, avec une IA qui rédige les annonces et répond aux questions des visiteurs.</p>
+        <div><span class="tag tag-ia">IA</span> <span class="tag">Python</span> <span class="tag">Django</span> <span class="tag">Ollama / Groq</span> </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="container detail">
+        <article>
+          <div class="video-frame">
+            <video controls preload="metadata">
+              <source src="videos/delormeimmobilier.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la lecture de cette vidéo.
+            </video>
+          </div>
+
+          <div class="prose">
+            <h3>Le projet</h3>
+
+            <p>
+              Delorme Immobilier est le site d'une agence immobilière nantaise
+              fictive de 5 agents. L'idée : faire gagner du temps aux agents et
+              mieux renseigner les visiteurs grâce à l'IA, sans jamais perdre le
+              contrôle sur ce qui est publié.
+            </p>
+
+            <p>
+              L'agent remplit la fiche d'un bien, l'IA rédige l'annonce, l'agent
+              la relit, la corrige et la publie. Côté visiteur, un chat répond
+              uniquement à partir des fiches publiées.
+            </p>
+
+            <h3>Ce que j'ai développé</h3>
+
+            <p>
+              J'ai développé l'ensemble avec Python et Django 5.2 : un site
+              public pensé mobile d'abord, un espace agent protégé, et une
+              couche d'IA indépendante du fournisseur, qui fonctionne aussi bien
+              avec un modèle local (Ollama) qu'avec Groq ou en mode démo.
+            </p>
+
+            <h3>Fonctionnalités principales</h3>
+
+            <ul>
+              <li>
+                Gestion des biens : surface, pièces, quartier, points forts,
+                photos, chaque bien rattaché à un agent
+              </li>
+
+              <li>
+                Annonces rédigées par l'IA à partir de la fiche, puis relues et
+                corrigées par l'agent avant publication
+              </li>
+
+              <li>
+                Chat client sur le site public, qui répond uniquement à partir
+                des fiches publiées et refuse les questions hors sujet
+              </li>
+
+              <li>
+                Tableau de bord agent : « Mes biens » et historique des
+                questions posées au chat
+              </li>
+
+              <li>
+                Authentification : un compte par agent, chacun ne voit et ne
+                modifie que ses biens, le directeur voit tout
+              </li>
+            </ul>
+
+            <p>
+              J'ai structuré le code en applications Django séparées (comptes,
+              biens, chat, IA) avec une règle simple : les dépendances ne vont
+              que vers le bas, et le module d'IA ne sait rien de l'immobilier.
+              Le filtre « hors sujet » du chat est évalué avec le vrai modèle
+              grâce à une commande dédiée, et le reste est couvert par 45 tests
+              automatisés utilisant un faux modèle d'IA.
+            </p>
+
+            <h3>Compétences développées</h3>
+
+            <ul>
+              <li>Développement web avec Python et Django</li>
+
+              <li>
+                Intégration de LLM via une API compatible OpenAI (Ollama, Groq)
+                et architecture à fournisseurs interchangeables
+              </li>
+
+              <li>
+                Prompt engineering pour la génération de contenu et le
+                cloisonnement d'un chatbot
+              </li>
+
+              <li>
+                Modélisation de données, droits d'accès par utilisateur et
+                authentification
+              </li>
+
+              <li>
+                Tests automatisés et évaluation d'un filtre IA avec un vrai
+                modèle
+              </li>
+
+              <li>
+                Documentation d'architecture et jeux de données de démonstration
+              </li>
+            </ul>
+
+            
+          
+          </div>
+        </article>
+
+        <aside class="side">
+          <div class="side-card">
+            <h4>Stack</h4>
+            <div class="chips"><span class="chip">IA</span><span class="chip">Python</span><span class="chip">Django</span><span class="chip">Ollama / Groq</span></div>
+          </div>
+          <div class="side-card">
+            <h4>Code source</h4>
+            <a href="https://github.com/queijoch-max/Delormeimmobilier" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Voir sur GitHub ↗</a>
+            <a href="index.html#projets" class="btn btn-outline">← Autres projets</a>
+          </div>
+          <div class="side-card">
+            <h4>Autres projets</h4>
+            <ul class="more-list"><li><a href="assistant-tri.html">Assistant IA de tri SAV</a></li><li><a href="synapse.html">Synapse</a></li><li><a href="wandora.html">Wandora</a></li><li><a href="coteacote.html">Côte à côte</a></li><li><a href="tech-dev.html">Tech &amp; Dev</a></li></ul>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>© 2026 Charlotte Queijo — Développeuse full stack · back-end &amp; IA</span>
+        <span>queijo.ch@gmail.com · 06 69 17 74 51</span>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -3,357 +3,630 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de Charlotte Queijo, développeuse full stack orientée back-end et IA : Python, Node.js, React. Projets Wandora, Côte à côte, assistant IA de tri SAV, Delorme Immobilier, Tech & Dev et Synapse."
+    />
+    <meta name="theme-color" content="#0a1224" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="css/style.css" />
 
-    <title>Charlotte Queijo | Développeuse web et web mobile</title>
+    <title>Charlotte Queijo | Développeuse full stack, back-end &amp; IA</title>
   </head>
 
   <body>
-    <header>
+    <a href="#projets" class="skip-link">Aller au contenu</a>
+
+    <!-- ========================= NAVIGATION ========================= -->
+    <header class="topbar">
       <div class="container">
-        <p>CHARLOTTE QUEIJO - FUTURE DÉVELOPPEUSE WEB ET WEB MOBILE</p>
+        <a href="#top" class="brand" aria-label="Charlotte Queijo, accueil">
+          <span class="brand-mark">CQ</span>
+          <span>Charlotte Queijo</span>
+        </a>
 
-        <nav>
-          <a href="#presentation">Présentation</a>
+        <button
+          class="nav-toggle"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          ☰
+        </button>
 
+        <nav class="nav-links" id="menu" aria-label="Navigation principale">
           <a href="#projets">Projets</a>
-
-          <a href="#contact">Contact</a>
+          <a href="#competences">Compétences</a>
+          <a href="#approche">Approche</a>
+          <a href="#parcours">Parcours</a>
+          <a href="#contact" class="nav-cta">Me contacter</a>
         </nav>
-
-        <h1>
-          En reconversion vers le développement web et web mobile, j'apprends en
-          concevant des projets concrets.
-        </h1>
-
-        <p>
-          Je développe des applications web pour apprendre, expérimenter et
-          progresser. Mon objectif est de rejoindre une alternance afin de
-          continuer à monter en compétences au sein d'une équipe de
-          développement.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#projets" class="button"> Voir mes projets </a>
-
-          <a href="https://github.com/queijoch-max" class="button"> GitHub </a>
-        </div>
-
-        <p>
-          Développement web · Créatrice de projets numériques · Curieuse et
-          autodidacte
-        </p>
       </div>
     </header>
 
-    <main>
-      <section class="section">
-        <h2>Apprendre en construisant</h2>
+    <main id="top">
+      <!-- ========================= HERO ========================= -->
+      <section class="hero" style="padding-top: 84px">
+        <div class="container">
+          <div>
+            <p class="eyebrow">
+              <span class="dot"></span> Développeuse full stack · orientée
+              back-end &amp; IA
+            </p>
 
-        <h2>
-          Des projets concrets pour expérimenter le développement web, découvrir
-          de nouvelles technologies et progresser étape par étape.
-        </h2>
+            <h1>
+              Je conçois des applications web fiables,
+              <span class="grad">de l'interface à l'IA.</span>
+            </h1>
 
-        <div class="skills">
-          <span class="skill">HTML</span>
-    <span class="skill">CSS</span>
-    <span class="skill">JavaScript</span>
-    <span class="skill">React</span>
-    <span class="skill">Vite</span>
-    <span class="skill">API REST</span>
-    <span class="skill">Node.js</span>
-    <span class="skill">Express</span>
-    <span class="skill">PHP</span>
-    <span class="skill">Symfony</span>
-    <span class="skill">Api Platform</span>
-    <span class="skill">Git</span>
-    <span class="skill">GitHub/GitLab</span>
+            <p class="lead">
+              Orientée back-end et IA (Python, Node.js), je maîtrise aussi le
+              front avec React. Je transforme un besoin en application
+              complète : API, base de données, sécurité, tests et intelligence
+              artificielle maîtrisée.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projets" class="btn btn-primary">Voir mes projets →</a>
+              <a href="#contact" class="btn btn-ghost">Me contacter</a>
+              <a
+                href="https://github.com/queijoch-max"
+                class="btn btn-ghost"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub ↗</a
+              >
+            </div>
+
+            <div class="trust-row">
+              <span>Titre pro niveau 6 — Concepteur Développeur d'Applications</span>
+              <span>2 certifications DataCamp</span>
+              <span>Formation Full Stack Liora</span>
+            </div>
+          </div>
+
+          <div class="code-card" aria-hidden="true">
+            <div class="code-bar">
+              <i></i><i></i><i></i>
+              <span>charlotte.profile.ts</span>
+            </div>
+<pre><span class="c-k">const</span> <span class="c-v">charlotte</span> = {
+  <span class="c-v">role</span>: <span class="c-s">"Développeuse full stack"</span>,
+  <span class="c-v">orientation</span>: <span class="c-s">"back-end &amp; IA"</span>,
+  <span class="c-v">back</span>: [<span class="c-s">"Python"</span>, <span class="c-s">"Node.js"</span>, <span class="c-s">"FastAPI"</span>, <span class="c-s">"Django"</span>],
+  <span class="c-v">ia</span>: [<span class="c-s">"LLM"</span>, <span class="c-s">"agents"</span>, <span class="c-s">"évaluation"</span>],
+  <span class="c-v">front</span>: [<span class="c-s">"React"</span>, <span class="c-s">"TypeScript"</span>],
+  <span class="c-v">certifications</span>: <span class="c-n">4</span>,
+  <span class="c-v">qualités</span>: [
+    <span class="c-s">"rigoureuse"</span>,
+    <span class="c-s">"curieuse"</span>,
+    <span class="c-s">"persévérante"</span>,
+  ],
+};</pre>
+          </div>
         </div>
       </section>
 
-      <section id="presentation" class="section">
-        <h2>Présentation</h2>
-
-        <h3>
-          Une reconversion guidée par le développement web et la création de
-          projets utiles.
-        </h3>
-
-       <p>
-  Après plusieurs années dans le domaine administratif, j’ai choisi de me
-  reconvertir vers le développement web, un métier qui allie logique,
-  créativité et résolution de problèmes concrets.
-</p>
-
-<p>
-  Je me forme aujourd’hui en autodidacte, avec une approche centrée sur la
-  pratique : comprendre un besoin, concevoir une solution, développer,
-  tester et améliorer.
-</p>
-
-<p>
-  Mes projets personnels m’ont permis de développer mes compétences en
-  HTML, CSS, JavaScript, React, Vite, Node.js, express PHP et Symfony. J’ai notamment réalisé une
-  utilisateurs et à structurer mes développements avec plus de rigueur.
-</p>
-
-<p>
-  Curieuse, rigoureuse et persévérante, j’aime comprendre en profondeur les
-  outils que j’utilise. Je recherche aujourd’hui une alternance en
-  développement web pour continuer à apprendre au sein d’une équipe et
-  contribuer à des projets concrets.
-</p>
-      </section>
-
-      <section id="projets" class="section">
-        <h2>Mes Projets</h2>
-
-
-      <div class="projects">
-
-  <section class="section-cartes">
-
-    <h2>Découvrez mes projets de développement web réalisés dans le cadre de
-          mon apprentissage.</h2>
-
-
-                <div class="grille-cartes">
-
-      <!-- ========================= -->
-      <!-- WANDORA -->
-      <!-- ========================= -->
-
-      <article class="carte">
-
-        <img
-          src="images/wandora.png"
-          alt="Capture d'écran de Wandora"
-          class="carte-image"
-        />
-
-        <h3>Wandora</h3>
-
-        <h4>
-          PHP · SYMFONY · API REST
-        </h4>
-
-        <p>
-          Réseau social pour voyageur avec carte interactive, album de voyages etc
-        </p>
-
-        <a href="wandora.html" class="button">
-          Découvrir le projet →
-        </a>
-
-      </article>
-
-      <!-- ========================= -->
-      <!-- NOMADLY -->
-      <!-- ========================= -->
-
-      <article class="carte">
-
-        <img
-          src="images/nomadly.png"
-          alt="Capture d'écran de Nomadly"
-          class="carte-image"
-        />
-
-        <h3>Nomadly</h3>
-
-        <h4>
-          PHP · SYMFONY
-        </h4>
-
-        <p>
-          Site e-commerce de matériel de trek, randonnée et camping
-        </p>
-
-        <a href="nomadly.html" class="button">
-          Découvrir le projet →
-        </a>
-
-      </article>
-
-      <!-- ========================= -->
-      <!-- TECH&DEV -->
-      <!-- ========================= -->
-
-      <article class="carte">
-
-        <img
-          src="images/tech&dev.png"
-          alt="Capture d'écran de Tech & Dev"
-          class="carte-image"
-        />
-
-        <h3>Tech & Dev</h3>
-
-        <h4>
-          React · JavaScript · React Router · Vite · Node.js · express
-        </h4>
-
-        <p>
-          Application web de gestion destinée aux développeurs pour centraliser tâches, projets, rendez-vous et notes au quotidien.
-        </p>
-
-        <a href="tech&dev.html" class="button">
-          Découvrir le projet →
-        </a>
-
-      </article>
-
-      <!-- ========================= -->
-      <!-- MONPILOT -->
-      <!-- ========================= -->
-
-      <article class="carte">
-
-        <img
-          src="images/monpilot.png"
-          alt="Capture d'écran de MonPilot"
-          class="carte-image"
-        />
-
-        <h3>MonPilot</h3>
-
-        <h4>
-          React · JavaScript · React Router
-        </h4>
-
-        <p>
-          Application web de gestion destinée aux indépendants et petites
-          entreprises pour centraliser les clients, devis, rendez-vous et
-          factures.
-        </p>
-
-        <a href="monpilot.html" class="button">
-          Découvrir le projet →
-        </a>
-
-      </article>
-
-
-      <!-- ========================= -->
-      <!-- ASSISTANT POTAGER -->
-      <!-- ========================= -->
-
-      <article class="carte">
-
-        <img
-          src="images/monassistantpotager.png"
-          alt="Capture d'écran de Mon Assistant Potager"
-          class="carte-image"
-        />
-
-        <h3>Mon Assistant Potager</h3>
-
-        <h4>
-          React · JavaScript · API REST
-        </h4>
-
-        <p>
-          Application web permettant d'accompagner les jardiniers grâce à une
-          API météo et des conseils personnalisés selon les cultures.
-        </p>
-
-        <a href="assistantpotager.html" class="button">
-          Découvrir le projet →
-        </a>
-
-      </article>
-
-
-      <!-- ========================= -->
-      <!-- SITE KINÉ -->
-      <!-- ========================= -->
-
-      <article class="carte">
-
-        <img
-          src="images/sitekine.png"
-          alt="Capture d'écran du site vitrine du cabinet de kinésithérapie"
-          class="carte-image"
-        />
-
-        <h3>Site vitrine - Cabinet de kinésithérapie</h3>
-
-        <h4>
-          HTML · CSS · JavaScript Vanilla
-        </h4>
-
-        <p>
-          Site vitrine responsive intégrant un widget Calendly afin de faciliter
-          la prise de rendez-vous des patients.
-        </p>
-
-        <a href="sitekine.html" class="button">
-          Découvrir le projet →
-        </a>
-
-      </article>
-
-
-      <!-- ========================= -->
-      <!-- UNITY -->
-      <!-- ========================= -->
-
-      <article class="carte">
-
-        <img
-          src="images/jeulabyrinthe.png"
-          alt="Capture d'écran du prototype de jeu vidéo Unity"
-          class="carte-image"
-        />
-
-        <h3>Prototype de jeu vidéo - Labyrinthe</h3>
-
-        <h4>
-          Unity · C#
-        </h4>
-
-        <p>
-          Prototype réalisé avec Unity afin d'expérimenter la logique de jeu,
-          les interactions utilisateur et la programmation en C#.
-        </p>
-
-        <a href="prototypejeuvideounity.html" class="button">
-          Découvrir le projet →
-        </a>
-
-      </article>
-
-    </div>
-
-  </section>
-
-</div>
-    </main>
-
-    <footer id="contact">
-      <div class="footer-contact">
-        <p>32 Route de Brezon, 07340 Félines</p>
-
-        <p>Email : queijo.ch@gmail.com</p>
-
-        <p>Téléphone : 0669177451</p>
+      <!-- ========================= CHIFFRES ========================= -->
+      <div class="stats">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat">
+              <strong>4</strong>
+              <span>certifications et titre pro</span>
+            </div>
+            <div class="stat">
+              <strong>2</strong>
+              <span>écosystèmes : JavaScript et Python</span>
+            </div>
+            <div class="stat">
+              <strong>Full stack</strong>
+              <span>interface, API, base de données, tests</span>
+            </div>
+            <div class="stat">
+              <strong>GitHub</strong>
+              <span>code et projets consultables en ligne</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="footer-info">
-        <p>© 2026 Charlotte Queijo - Future développeuse web et web mobile</p>
+      <!-- ========================= PROJETS ========================= -->
+      <section id="projets">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="kicker">// projets</p>
+            <h2>Des applications complètes, conçues comme de vrais produits</h2>
+            <p>
+              Des projets personnels, du cahier des charges aux tests : certains
+              partent d'un cas d'usage fictif, d'autres sont des outils que
+              j'utilise moi-même. Chacun couvre l'interface, l'API, les données
+              et la sécurité.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <!-- ASSISTANT SAV -->
+            <article class="project reveal">
+              <div class="project-media" data-label="Assistant IA SAV">
+                <img
+                  src="images/assistant-tri.png"
+                  alt="Capture d'écran de l'assistant IA de tri SAV"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
+              <div class="project-body">
+                <div class="project-tags">
+                  <span class="tag tag-ia">IA locale</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">FastAPI</span>
+                  <span class="tag">SQLAlchemy</span>
+                </div>
+                <p class="project-kind">Cas fictif · en cours</p>
+                <h3>Assistant IA de tri SAV</h3>
+                <p>
+                  Tri automatique des demandes d'un service après-vente par une
+                  IA 100 % locale, avec garde-fous, brouillons de réponse et
+                  évaluation chiffrée de la qualité.
+                </p>
+                <div class="project-links">
+                  <a href="assistant-tri.html">Étude de cas →</a>
+                  <a
+                    href="https://github.com/queijoch-max/assistant-tri"
+                    class="secondary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Code ↗</a
+                  >
+                </div>
+              </div>
+            </article>
+            <!-- DELORME -->
+            <article class="project reveal">
+              <div class="project-media" data-label="Delorme Immobilier">
+                <img
+                  src="images/delormeimmobilier.png"
+                  alt="Capture d'écran de Delorme Immobilier"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
+              <div class="project-body">
+                <div class="project-tags">
+                  <span class="tag tag-ia">IA</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">Django</span>
+                  <span class="tag">Ollama / Groq</span>
+                </div>
+                <p class="project-kind">Cas fictif · agence imaginaire</p>
+                <h3>Delorme Immobilier</h3>
+                <p>
+                  Site et back-office d'une agence immobilière : annonces
+                  rédigées par l'IA, chat client limité aux biens publiés et
+                  espace agent sécurisé.
+                </p>
+                <div class="project-links">
+                  <a href="delormeimmobilier.html">Étude de cas →</a>
+                  <a
+                    href="https://github.com/queijoch-max/Delormeimmobilier"
+                    class="secondary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Code ↗</a
+                  >
+                </div>
+              </div>
+            </article>
+            <!-- SYNAPSE -->
+            <article class="project reveal">
+              <div class="project-media" data-label="Synapse">
+                <img
+                  src="images/synapse.png"
+                  alt="Capture d'écran de Synapse"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
+              <div class="project-body">
+                <div class="project-tags">
+                  <span class="tag tag-ia">IA · agent</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">Gemini</span>
+                  <span class="tag">IndexedDB</span>
+                </div>
+                <p class="project-kind">Outil perso · révisions</p>
+                <h3>Synapse</h3>
+                <p>
+                  Second cerveau pour apprendre : notes reliées, import de PDF,
+                  quiz, et un assistant IA capable de chercher et lire tous les
+                  cours.
+                </p>
+                <div class="project-links">
+                  <a href="synapse.html">Étude de cas →</a>
+                  <a
+                    href="https://github.com/queijoch-max/Synapse"
+                    class="secondary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Code ↗</a
+                  >
+                </div>
+              </div>
+            </article>
+            <!-- WANDORA -->
+            <article class="project reveal">
+              <div class="project-media" data-label="Wandora">
+                <img
+                  src="images/wandora.png"
+                  alt="Capture d'écran de Wandora"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
+              <div class="project-body">
+                <div class="project-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">Symfony</span>
+                  <span class="tag">JWT</span>
+                </div>
+                <p class="project-kind">Projet personnel</p>
+                <h3>Wandora</h3>
+                <p>
+                  Réseau social pour voyageurs : carte interactive, itinéraires
+                  et albums de voyage, fil d'actualité, amis et messagerie.
+                </p>
+                <div class="project-links">
+                  <a href="wandora.html">Étude de cas →</a>
+                  <a
+                    href="https://github.com/queijoch-max/Wandora"
+                    class="secondary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Code ↗</a
+                  >
+                </div>
+              </div>
+            </article>
+            <!-- CÔTE À CÔTE -->
+            <article class="project reveal">
+              <div class="project-media" data-label="Côte à côte">
+                <img
+                  src="images/coteacote.png"
+                  alt="Capture d'écran de Côte à côte"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
+              <div class="project-body">
+                <div class="project-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">Symfony</span>
+                  <span class="tag">PHPUnit</span>
+                  <span class="tag">Vitest</span>
+                </div>
+                <p class="project-kind">Prototype V1</p>
+                <h3>Côte à côte</h3>
+                <p>
+                  Application d'entraide communale sécurisée par conception :
+                  inscriptions validées par la mairie, aucune coordonnée
+                  affichée, modération et journal d'actions.
+                </p>
+                <div class="project-links">
+                  <a href="coteacote.html">Étude de cas →</a>
+                  <a
+                    href="https://github.com/queijoch-max/coteacote"
+                    class="secondary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Code ↗</a
+                  >
+                </div>
+              </div>
+            </article>
+            <!-- TECH & DEV -->
+            <article class="project reveal">
+              <div class="project-media" data-label="Tech &amp; Dev">
+                <img
+                  src="images/tech&amp;dev.png"
+                  alt="Capture d'écran de Tech & Dev"
+                  loading="lazy"
+                  onerror="this.remove()"
+                />
+              </div>
+              <div class="project-body">
+                <div class="project-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">Node.js</span>
+                  <span class="tag">Express</span>
+                  <span class="tag">SQLite</span>
+                </div>
+                <p class="project-kind">Outil perso · quotidien</p>
+                <h3>Tech &amp; Dev</h3>
+                <p>
+                  Application web de gestion destinée aux développeurs pour
+                  centraliser tâches, projets, rendez-vous et notes au
+                  quotidien.
+                </p>
+                <div class="project-links">
+                  <a href="tech-dev.html">Étude de cas →</a>
+                  <a
+                    href="https://github.com/queijoch-max/Tech-Dev"
+                    class="secondary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Code ↗</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="projects-note reveal">
+            <p>
+              <strong>Ce ne sont que mes principaux projets.</strong> J'en ai
+              réalisé d'autres et j'en construis régulièrement de nouveaux :
+              tout mon code est visible sur GitHub.
+            </p>
+            <a
+              href="https://github.com/queijoch-max"
+              class="btn btn-outline"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Voir tous mes projets sur GitHub ↗</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================= COMPÉTENCES ========================= -->
+      <section id="competences">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="kicker">// compétences</p>
+            <h2>Orientée back-end &amp; IA, à l'aise sur toute la stack</h2>
+            <p>
+              Les technologies que j'ai utilisées dans mes projets, classées par
+              domaine.
+            </p>
+          </div>
+
+          <div class="skills-grid">
+<div class="skill-card reveal">
+              <div class="icon">{ }</div>
+              <h3>Back-end &amp; API</h3>
+              <p class="sub">APIs REST sécurisées</p>
+              <div class="chips">
+                <span class="chip">Node.js</span>
+                <span class="chip">Express</span>
+                <span class="chip">Python</span>
+                <span class="chip">FastAPI</span>
+                <span class="chip">Django</span>
+                <span class="chip">PHP / Symfony</span>
+                <span class="chip">API Platform</span>
+              </div>
+            </div>
+<div class="skill-card reveal">
+              <div class="icon">AI</div>
+              <h3>Intelligence artificielle</h3>
+              <p class="sub">LLM intégrés avec garde-fous</p>
+              <div class="chips">
+                <span class="chip">LLM locaux (Ollama)</span>
+                <span class="chip">Gemini / Groq</span>
+                <span class="chip">Prompt engineering</span>
+                <span class="chip">Agents à outils</span>
+                <span class="chip">Évaluation de modèles</span>
+              </div>
+            </div>
+<div class="skill-card reveal">
+              <div class="icon">DB</div>
+              <h3>Données &amp; qualité</h3>
+              <p class="sub">Fiabilité et maintenabilité</p>
+              <div class="chips">
+                <span class="chip">SQLite</span>
+                <span class="chip">SQLAlchemy</span>
+                <span class="chip">Doctrine</span>
+                <span class="chip">JWT / sessions</span>
+                <span class="chip">pytest</span>
+                <span class="chip">PHPUnit</span>
+                <span class="chip">Vitest</span>
+                <span class="chip">Git / GitHub</span>
+              </div>
+            </div>
+<div class="skill-card reveal">
+              <div class="icon">&lt;/&gt;</div>
+              <h3>Front-end</h3>
+              <p class="sub">Interfaces modernes et responsives</p>
+              <div class="chips">
+                <span class="chip">JavaScript</span>
+                <span class="chip">TypeScript</span>
+                <span class="chip">React</span>
+                <span class="chip">React Router</span>
+                <span class="chip">Vite</span>
+                <span class="chip">HTML / CSS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================= APPROCHE ========================= -->
+      <section id="approche">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="kicker">// approche</p>
+            <h2>Ma façon de travailler</h2>
+            <p>
+              Quatre principes que j'applique à chaque projet.
+            </p>
+          </div>
+
+          <div class="approach-grid">
+            <div class="approach reveal">
+              <span class="num">01</span>
+              <div>
+                <h3>Partir du besoin</h3>
+                <p>
+                  Je cadre le projet avant de coder : cahier des charges, règles
+                  métier et critères de validation.
+                </p>
+              </div>
+            </div>
+
+            <div class="approach reveal">
+              <span class="num">02</span>
+              <div>
+                <h3>Sécuriser dès la conception</h3>
+                <p>
+                  Authentification, droits par rôle, protection CSRF et données
+                  personnelles pensés dès le départ.
+                </p>
+              </div>
+            </div>
+
+            <div class="approach reveal">
+              <span class="num">03</span>
+              <div>
+                <h3>Tester ce qui compte</h3>
+                <p>
+                  Des tests automatisés sur les règles critiques, côté API
+                  comme côté interface.
+                </p>
+              </div>
+            </div>
+
+            <div class="approach reveal">
+              <span class="num">04</span>
+              <div>
+                <h3>Une IA maîtrisée</h3>
+                <p>
+                  Je garde le contrôle sur l'IA : garde-fous écrits en code, validation humaine et résultats mesurés sur des jeux de test annotés.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================= PARCOURS ========================= -->
+      <section id="parcours">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="kicker">// parcours</p>
+            <h2>Une reconversion devenue un métier</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-text reveal">
+              <p>
+                Après plusieurs années dans le <strong>domaine administratif</strong>,
+                j'ai choisi de me reconvertir vers le développement, un métier
+                qui allie logique, créativité et résolution de problèmes
+                concrets.
+              </p>
+              <p>
+                Aujourd'hui <strong>développeuse full stack orientée
+                back-end et IA</strong>, je travaille principalement avec
+                Python et Node.js, et je conçois aussi les interfaces avec
+                React. Ma démarche reste la même sur
+                chaque projet : comprendre un besoin, concevoir une solution,
+                développer, tester et améliorer.
+              </p>
+              <p>
+                Curieuse, rigoureuse et persévérante, j'aime comprendre en
+                profondeur les outils que j'utilise.
+              </p>
+            </div>
+
+            <div class="cert-list reveal">
+              <div class="cert">
+                <div class="cert-badge">★</div>
+                <div>
+                  <strong>Titre professionnel niveau 6</strong>
+                  <span>Concepteur Développeur d'Applications</span>
+                </div>
+              </div>
+              <div class="cert">
+                <div class="cert-badge">✓</div>
+                <div>
+                  <strong>Développeur Python Associate</strong>
+                  <span>DataCamp</span>
+                </div>
+              </div>
+              <div class="cert">
+                <div class="cert-badge">✓</div>
+                <div>
+                  <strong>AI Engineer for Developers</strong>
+                  <span>DataCamp</span>
+                </div>
+              </div>
+              <div class="cert">
+                <div class="cert-badge">✓</div>
+                <div>
+                  <strong>Développeur Full Stack</strong>
+                  <span>Liora</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================= CONTACT ========================= -->
+      <section id="contact">
+        <div class="container">
+          <div class="contact-card reveal">
+            <div>
+              <h2>Travaillons ensemble</h2>
+              <p>
+                Un projet, une équipe, une opportunité ? Écrivez-moi, je
+                réponds avec plaisir.
+              </p>
+              <a href="mailto:queijo.ch@gmail.com" class="btn btn-primary"
+                >Envoyer un e-mail →</a
+              >
+            </div>
+
+            <div class="contact-list">
+              <a href="mailto:queijo.ch@gmail.com" class="contact-item">
+                <span>✉</span>
+                <span><small>E-MAIL</small>queijo.ch@gmail.com</span>
+              </a>
+              <a href="tel:+33669177451" class="contact-item">
+                <span>☎</span>
+                <span><small>TÉLÉPHONE</small>06 69 17 74 51</span>
+              </a>
+              <a
+                href="https://github.com/queijoch-max"
+                class="contact-item"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>⌥</span>
+                <span><small>GITHUB</small>github.com/queijoch-max</span>
+              </a>
+              <div class="contact-item">
+                <span>⌖</span>
+                <span><small>LOCALISATION</small>Félines (07)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>© 2026 Charlotte Queijo — Développeuse full stack · back-end &amp; IA</span>
+        <span>Fait main en HTML, CSS et JavaScript</span>
       </div>
     </footer>
 

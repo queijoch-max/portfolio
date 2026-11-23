@@ -1,0 +1,199 @@
+<!doctype html>
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a1224" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Assistant IA de tri SAV - Python, FastAPI et IA locale | Charlotte Queijo</title>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <a href="index.html" class="brand" aria-label="Charlotte Queijo, accueil">
+          <span class="brand-mark">CQ</span>
+          <span>Charlotte Queijo</span>
+        </a>
+        <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">☰</button>
+        <nav class="nav-links" id="menu" aria-label="Navigation principale">
+          <a href="index.html#projets" class="active">Projets</a>
+          <a href="index.html#competences">Compétences</a>
+          <a href="index.html#approche">Approche</a>
+          <a href="index.html#parcours">Parcours</a>
+          <a href="index.html#contact" class="nav-cta">Me contacter</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page-head">
+      <div class="container">
+        <a href="index.html#projets" class="back-link">← tous les projets</a>
+        <h1>Assistant IA de tri SAV - Python, FastAPI et IA locale</h1>
+        <p class="lead">Application web qui trie automatiquement les demandes clients d'un service après-vente grâce à une IA 100 % locale, puis propose un brouillon de réponse relu par un agent avant envoi.</p>
+        <div><span class="tag tag-ia">IA locale</span> <span class="tag">Python</span> <span class="tag">FastAPI</span> <span class="tag">Pydantic</span> <span class="tag">SQLAlchemy</span> <span class="tag">Ollama</span> </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="container detail">
+        <article>
+          <div class="video-frame">
+            <video controls preload="metadata">
+              <source src="videos/assistant-tri.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la lecture de cette vidéo.
+            </video>
+          </div>
+
+          <div class="prose">
+            <h3>Le projet</h3>
+
+            <p>
+              Ce projet répond à un cas métier concret : « Cycles Mistral »,
+              réseau fictif de 6 ateliers de vélos électriques à Lyon, reçoit
+              environ 250 messages par semaine. Deux personnes y passent 12
+              heures à les lire, les classer et les transférer, pendant que des
+              urgences (batterie qui chauffe, freins) se perdent parmi les
+              questions simples.
+            </p>
+
+            <p>
+              L'objectif : passer sous les 3 heures par semaine, sans jamais
+              laisser une urgence non vue. La règle d'or : l'IA propose,
+              l'humain décide. Aucune réponse ne part au client sans validation
+              d'un agent. Le projet est en cours de développement.
+            </p>
+
+            <h3>Ce que j'ai développé</h3>
+
+            <p>
+              J'ai construit une API avec FastAPI et Python 3.13, des schémas de
+              données Pydantic, une base SQLite gérée avec SQLAlchemy et Alembic,
+              et un modèle d'IA local (Ollama, Qwen 2.5) : les données clients
+              ne quittent jamais la machine.
+            </p>
+
+            <h3>Fonctionnalités principales</h3>
+
+            <ul>
+              <li>
+                Formulaire client avec numéro de suivi, puis analyse en
+                arrière-plan de chaque demande
+              </li>
+
+              <li>
+                Analyse IA : catégorie, urgence sur 4 niveaux, résumé, atelier
+                concerné, justification et score de confiance
+              </li>
+
+              <li>
+                Garde-fous écrits en code : mots-clés de sécurité qui forcent
+                l'urgence critique, masquage des numéros de carte avant l'appel
+                à l'IA, protection contre l'injection de prompt
+              </li>
+
+              <li>
+                Brouillon de réponse construit par le code autour d'une phrase
+                personnalisée écrite par l'IA, modifiable avant envoi
+              </li>
+
+              <li>
+                Robustesse : nouvelle tentative puis mode dégradé si l'IA
+                échoue, aucune demande n'est perdue
+              </li>
+
+              <li>
+                Tableau de bord SAV trié par urgence (en cours de
+                développement)
+              </li>
+            </ul>
+
+            <h3>Mesurer la qualité de l'IA</h3>
+
+            <p>
+              J'ai constitué un jeu de 40 messages annotés à la main et des
+              scripts d'évaluation pour mesurer les résultats plutôt que de se
+              fier à une impression. Les garde-fous font passer la détection des
+              urgences critiques de 4 sur 6 avec l'IA seule à 6 sur 6, et le
+              routage vers le bon atelier atteint 97,5 %.
+            </p>
+
+            <p>
+              Pour les brouillons de réponse, le passage de Qwen 3B à 7B avec un
+              prompt amélioré a fait monter les contrôles automatiques de 22 % à
+              82 %. Mais la relecture humaine a montré qu'une métrique
+              automatique peut être trop optimiste : une métrique doit toujours
+              être confrontée à une lecture humaine.
+            </p>
+
+            <h3>Compétences développées</h3>
+
+            <ul>
+              <li>Développement d'une API avec Python, FastAPI et Pydantic</li>
+
+              <li>
+                Intégration d'un LLM local : sortie JSON structurée, délais
+                maximum, nouvelles tentatives
+              </li>
+
+              <li>
+                Conception d'une architecture indépendante du modèle (interface
+                <code>AIProvider</code>, faux fournisseur pour les tests)
+              </li>
+
+              <li>
+                Prompt engineering, garde-fous et sécurité face à l'injection de
+                prompt
+              </li>
+
+              <li>
+                Évaluation d'un système d'IA sur un jeu de données annoté
+              </li>
+
+              <li>
+                Base de données avec SQLAlchemy et migrations Alembic
+              </li>
+
+              <li>Tests automatisés avec pytest, outillage uv et ruff</li>
+            </ul>
+
+            
+          
+          </div>
+        </article>
+
+        <aside class="side">
+          <div class="side-card">
+            <h4>Stack</h4>
+            <div class="chips"><span class="chip">IA locale</span><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Pydantic</span><span class="chip">SQLAlchemy</span><span class="chip">Ollama</span></div>
+          </div>
+          <div class="side-card">
+            <h4>Code source</h4>
+            <a href="https://github.com/queijoch-max/assistant-tri" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Voir sur GitHub ↗</a>
+            <a href="index.html#projets" class="btn btn-outline">← Autres projets</a>
+          </div>
+          <div class="side-card">
+            <h4>Autres projets</h4>
+            <ul class="more-list"><li><a href="delormeimmobilier.html">Delorme Immobilier</a></li><li><a href="synapse.html">Synapse</a></li><li><a href="wandora.html">Wandora</a></li><li><a href="coteacote.html">Côte à côte</a></li><li><a href="tech-dev.html">Tech &amp; Dev</a></li></ul>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span>© 2026 Charlotte Queijo — Développeuse full stack · back-end &amp; IA</span>
+        <span>queijo.ch@gmail.com · 06 69 17 74 51</span>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

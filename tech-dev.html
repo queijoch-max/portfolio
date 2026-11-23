@@ -3,51 +3,56 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>
-      Tech & Dev - Application web de gestion de projets et tâches | Charlotte Queijo
-    </title>
-
+    <meta name="theme-color" content="#0a1224" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
+    <title>Tech &amp; Dev - Application web de gestion de projets et tâches | Charlotte Queijo</title>
   </head>
 
   <body>
-    <header>
+    <header class="topbar">
       <div class="container">
-        <nav>
-          <a href="index.html">Accueil</a>
-
-          <a href="index.html#projets">Projets</a>
-
-          <a href="#contact">Contact</a>
+        <a href="index.html" class="brand" aria-label="Charlotte Queijo, accueil">
+          <span class="brand-mark">CQ</span>
+          <span>Charlotte Queijo</span>
+        </a>
+        <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">☰</button>
+        <nav class="nav-links" id="menu" aria-label="Navigation principale">
+          <a href="index.html#projets" class="active">Projets</a>
+          <a href="index.html#competences">Compétences</a>
+          <a href="index.html#approche">Approche</a>
+          <a href="index.html#parcours">Parcours</a>
+          <a href="index.html#contact" class="nav-cta">Me contacter</a>
         </nav>
-
-        <h1>Tech & Dev - Application web de gestion de projets et tâches</h1>
-
-        <p>
-          Application web de gestion de projets et tâches, avec notes, agendas et suivie de progression des projets.
-        </p>
       </div>
     </header>
 
+    <div class="page-head">
+      <div class="container">
+        <a href="index.html#projets" class="back-link">← tous les projets</a>
+        <h1>Tech &amp; Dev - Application web de gestion de projets et tâches</h1>
+        <p class="lead">Application web de gestion de projets et tâches, avec notes, agendas et suivi de progression des projets.</p>
+        <div><span class="tag">React</span> <span class="tag">Node.js</span> <span class="tag">Express</span> <span class="tag">SQLite</span> <span class="tag">JWT</span> </div>
+      </div>
+    </div>
+
     <main>
-      <section class="article-projets">
-        <div class="container">
-          <h2>Tech & Dev - Application web de gestion de projets et tâches</h2>
-
-          <!-- DÉMONSTRATION VIDÉO -->
-
-          <div class="article-video">
-            <video controls>
-              <source src="videos/tech&dev.mp4" type="video/mp4" />
-
+      <div class="container detail">
+        <article>
+          <div class="video-frame">
+            <video controls preload="metadata">
+              <source src="videos/tech&amp;dev.mp4" type="video/mp4" />
               Votre navigateur ne supporte pas la lecture de cette vidéo.
             </video>
           </div>
 
-          <div class="article-content">
+          <div class="prose">
             <h3>Le projet</h3>
 
             <p>
@@ -110,30 +115,33 @@
               <li>Versionnement avec Git et GitHub</li>
             </ul>
 
-            <a
-              href="https://github.com/queijoch-max/Tech-Dev"
-              class="button"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Découvrir l'application
-            </a>
+            
+          
           </div>
-        </div>
-      </section>
+        </article>
+
+        <aside class="side">
+          <div class="side-card">
+            <h4>Stack</h4>
+            <div class="chips"><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">SQLite</span><span class="chip">JWT</span></div>
+          </div>
+          <div class="side-card">
+            <h4>Code source</h4>
+            <a href="https://github.com/queijoch-max/Tech-Dev" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Voir sur GitHub ↗</a>
+            <a href="index.html#projets" class="btn btn-outline">← Autres projets</a>
+          </div>
+          <div class="side-card">
+            <h4>Autres projets</h4>
+            <ul class="more-list"><li><a href="assistant-tri.html">Assistant IA de tri SAV</a></li><li><a href="delormeimmobilier.html">Delorme Immobilier</a></li><li><a href="synapse.html">Synapse</a></li><li><a href="wandora.html">Wandora</a></li><li><a href="coteacote.html">Côte à côte</a></li></ul>
+          </div>
+        </aside>
+      </div>
     </main>
 
-    <footer id="contact">
-      <div class="footer-contact">
-        <p>32 Route de Brezon, 07340 Félines</p>
-
-        <p>Email : queijo.ch@gmail.com</p>
-
-        <p>Téléphone : 06 69 17 74 51</p>
-      </div>
-
-      <div class="footer-info">
-        <p>© 2026 Charlotte Queijo - Future développeuse web et web mobile</p>
+    <footer class="site-footer">
+      <div class="container">
+        <span>© 2026 Charlotte Queijo — Développeuse full stack · back-end &amp; IA</span>
+        <span>queijo.ch@gmail.com · 06 69 17 74 51</span>
       </div>
     </footer>
 
